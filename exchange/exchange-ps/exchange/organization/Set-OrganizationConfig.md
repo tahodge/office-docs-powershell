@@ -71,6 +71,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter>
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -130,6 +131,7 @@ Set-OrganizationConfig [-Identity] <OrganizationIdParameter> -SharedConfiguratio
  [-LinkPreviewEnabled <$true | $false>] [-PerTenantSwitchToESTSEnabled <$true | $false>]
  [-RealTimeLogServiceEnabled <$true | $false>] [-RefreshSessionEnabled <$true | $false>]
  [-SmtpActionableMessagesEnabled <$true | $false>] [-UnblockUnsafeSenderPromptEnabled <$true | $false>]
+ [-AuditDisabled <$true | $false>]
  [<CommonParameters>]
 ```
 
@@ -2056,6 +2058,26 @@ Type: $true | $false
 Parameter Sets: Set2, Set3
 Aliases:
 Applicable: Exchange Server 2016, Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuditDisabled
+This parameter is only available in the cloud-based service.
+The AuditDisabled parameter specifies whether to disable all mailbox audits. Valid values are:
+
+- $false: Allow mailbox audits for users in this organization. This is the default value.
+
+- $true: Do not allow any mailbox audits in this organization. 
+
+```yaml
+Type: $true | $false
+Parameter Sets: Set2, Set3
+Aliases:
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
